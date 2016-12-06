@@ -1,0 +1,283 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form,
+fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑';
+}
+
+body, button, input, select, textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  font-family: '微软雅黑';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_1475980840_0901175.eot");
+  /* IE9*/
+  src: url("//at.alicdn.com/t/font_1475980840_0901175.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1475980840_0901175.woff") format("woff"), url("//at.alicdn.com/t/font_1475980840_0901175.ttf") format("truetype"), url("//at.alicdn.com/t/font_1475980840_0901175.svg#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-size: 14px;
+  font-style: normal;
+}
+
+.size-12 {
+  font-size: 12px;
+}
+
+.size-14 {
+  font-size: 14px;
+}
+
+.size-16 {
+  font-size: 16px;
+}
+
+.size-18 {
+  font-size: 18px;
+}
+
+.cusor_hand {
+  cursor: pointer;
+}
+
+.overflow_pre {
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.clear:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+header {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  position: relative;
+}
+
+header > span {
+  float: right;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+header > .logo {
+  float: left;
+  display: block;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header > .logo > img {
+  width: 70%;
+}
+
+header > a {
+  float: right;
+  font-size: 14px;
+  color: #de2424;
+  margin-top: 40px;
+}
+
+footer {
+  padding-top: 30px;
+}
+
+footer > p {
+  text-align: center;
+  color: #545454;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+article {
+  background-color: #FFFFFF;
+  border: 1px solid #c9c9c9;
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 80px 340px 70px 0;
+}
+
+article > h1 {
+  font-weight: 400;
+  font-size: 26px;
+  color: #0b60a2;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+article > ul {
+  width: 100%;
+}
+
+article > ul > li {
+  height: 40px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+article > ul > li > input {
+  font-size: 14px;
+  float: right;
+  width: 400px;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding-left: 10px;
+  outline-color: #0b60a2;
+}
+
+article > ul > li > #CodeForMobile {
+  width: 260px;
+}
+
+article > ul > li > button {
+  height: 45px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #0b60a2;
+  line-height: 45px;
+  text-align: center;
+  float: right;
+  width: 130px;
+  color: #FFFFFF;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+article > ul > li > img {
+  position: absolute;
+  right: 10px;
+  height: 35px;
+  top: 2.5px;
+  display: block;
+}
+
+article > ul > li > span {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  color: #a45454;
+}
+
+article > ul > li > h5 {
+  font-weight: 400;
+  float: right;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  color: #0e0e0e;
+  margin-right: 15px;
+}
+
+article > #reg {
+  width: 400px;
+  border: none;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #0b60a2;
+  color: #FFFFFF;
+  cursor: pointer;
+  float: right;
+}

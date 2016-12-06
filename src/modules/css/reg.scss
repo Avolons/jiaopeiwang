@@ -6,6 +6,7 @@ header{
     width: 1200px;
     margin: 0 auto;
     height: 100px;
+    position: relative;
     >span{
         float: right;
         font-size: 14px;
@@ -15,9 +16,12 @@ header{
         float: left;
         display: block;
         margin: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
         >img{
-            width: 510px;
-            margin-top: 7.5px;
+            width: 70%;
         }
     }
     >a{

@@ -74,7 +74,7 @@ body {
                 width: 20px;
                 text-align: center;
                 line-height: 20px;
-                margin-top: 1.5px;
+                margin-top: 1px;
             }
             >.type-one {
                 display: none;
@@ -134,9 +134,9 @@ body {
             float: left;
             display: block;
             margin-left: -100px;
-            width: 100px;
+            width: 120px;
             box-sizing: border-box;
-            padding-left: 30px;
+            padding-left: 23px;
             height: 20px;
             line-height: 20px;
             color: #515151;
@@ -172,7 +172,7 @@ body {
         position: relative;
         z-index: -3;
         >li{
-            width: 120px;
+            width: 100px;
             text-align: center;
             font-size: 12px;
             float: left;

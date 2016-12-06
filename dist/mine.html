@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>琇雅-功能中心</title>
+	
+    <link rel="stylesheet" type="text/css" href="/static/html/header/header.css" />
+    <link rel="stylesheet" type="text/css" href="/static/html/person_msg/person_msg.css" />
+    <link rel="stylesheet" type="text/css" href="/static/html/footer/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mine.css" />
+</head>
+	<body>
+
+      
+<header class="header">
+    <div class="header-top">
+       <ul>
+         <li class="focusus size-12">关注我们: <a href=""><img src="/Src/mohrss/img/common/header-weibo.png" alt="weibo" /></a><a href=""><img src="/Src/mohrss/img/common/header-weixin.png" alt="weixin" /></a></li>
+         <li class="appdownload size-12 cusor_hand"><a href=""><i class="iconfont">&#xe602;</i>App下载</a></li>
+         <li class="contactus size-12 cusor_hand"><a href="">联系我们</a></li>
+         <li class="message size-12 cusor_hand"><a href=""><i class="iconfont">&#xe601;</i>消息 <span>(3)</span></a></li>
+         <li class="lgandre">
+         	<a href="#" class="login size-12">您好，请登录</a>
+         	<a href="#" class="regin">免费注册</a>
+         </li>
+         <li class="functions size-12 cusor_hand">Hi，hjj黄姣姣
+         	<button type="button" class="cusor_hand"><a href="">【退出】</a></button>
+         	<span></span>
+         	<ul class="function-lists">
+         		<div class="fun-inf">
+         			<img src="/Src/mohrss/img/common/header-arcter.png"/>
+         			<span>hijj黄娇娇</span>
+         			<span>已学习&nbsp;&nbsp;16小时</span>
+         		</div>
+         		<li><a href="">激活学习卡</a></li>
+         		<li><a href="">我的课程</a></li>
+         		<li><a href="">我的交易</a></li>
+         		<li><a href="">个人资料</a></li>
+         		<li><a href="">退出</a></li>
+         	</ul>
+         </li>
+       </ul>
+    </div>
+    <div class="header-bottom">
+      <div class="header-bottom-content">
+        <figure>
+          <img src="/Src/mohrss/img/common/header-log.png" alt="log" />
+        </figure>
+        <ul>
+          <li><a href="">课程中心</a></li>
+          <li><a href="">我的考试</a></li>
+          <li class="select"><a href="">我的云课堂</a></li>
+          <!-- <li><a href="">作品展示</a></li> -->
+          <li><a href="">师资介绍</a></li>
+          <li><a href="">证书查询</a></li>
+          <!-- <li><a href="">作品追溯</a></li> -->
+        </ul>
+        <div class="header-search">
+          <i class="iconfont">&#xe604;</i>
+          <input type="text"  value="" placeholder="搜素你要的课程">
+        </div>
+     </div>
+    </div>
+</header>
+
+
+    <article class="person-content clear">
+        <!-- 左侧列表部分 -->
+        <section class="person-left">
+            <figure>
+              <img src={{personData.imgsrc}} alt="arcter" />
+              <h5 class="size-14 overflow_pre">{{personData.name}}</h5>
+              <span class="size-12">已学时长:{{personData.studyTime}}小时</span>
+              <button type="button" class="size-12">更换头像</button>
+            </figure>
+            <ul>
+              <li class="select"><a href="#"><i class="iconfont" >&#xe61a;</i>我的云课堂</a></li>
+              <li><a href="#"><i class="iconfont">&#xe618;</i>我的证书</a></li>
+              <li><a href="#"><i class="iconfont">&#xe616;</i>我的作品</a></li>
+              <li class="myask"><a href="#"><i class="iconfont">&#xe615;</i>我的提问</a></li>
+              <li><a href="#"><i class="iconfont">&#xe60d;</i>我的消息</a></li>
+              <li v-on:click="toggleShow()" class="mypurch"><i class="iconfont">&#xe614;</i>我的交易<span>∧</span>
+              </li>
+               <ul id="functions">
+              		  <li class="select"><a href="#">订购的教材</a></li>
+		              <li><a href="#">购买的课程</a></li>
+		              <li><a href="#">激活的学习卡</a></li>
+              	</ul>
+              <li class="select persondata"><a href="#"><i class="iconfont">&#xe617;</i>个人详情</a></li>
+              <li ><a href="#"><i class="iconfont">&#xe613;</i>修改密码</a></li>
+            </ul>
+        </section>
+        <!-- 右侧主体内容展现部分 -->
+        <section class="person-right">
+             <!-- <link rel="import" href="modules/html/person_password/person_password.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_editor/person_editor.html?__inline"> -->
+             <div class="person-msg">
+	<h1>个人信息</h1>
+	<ul>
+		<li>
+			<input type="text"  id="username" value="" placeholder="用户名以字母开头字数在6-20之间"/>
+			<span>用户名 ：</span>
+			<i>*</i>
+		</li>
+		<li>
+			<input type="text"  id="name" value="" placeholder="请填写真实姓名"/>
+			<span>姓名 ：</span>
+			<i>*</i>
+		</li>
+		<li>
+			<div class="sexchoose">
+				<input type="radio" name="Sex" value="1" />男
+               <input type="radio" name="Sex" value="2" style="margin-left: 10px;" />女
+			</div>
+			<span>性别 ：</span>
+			<i>*</i>
+		</li>
+		<li>
+			<select name="Major" id="Major">
+                            <option value="0">请选择</option>
+                        </select>
+			<span>专业 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Email" value="" placeholder="符合邮箱格式"/>
+			<span>电子邮箱 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Mobile" value="" placeholder="符合手机格式"/>
+			<span>手机号码 ：</span>
+		</li>
+		<li>
+			<select name="IDType" id="IDType">
+                            <option value="0">身份证</option>
+                            <option value="1">士兵证</option>
+                            <option value="2">军官证</option>
+                            <option value="3">警官证</option>
+                            <option value="4">护照</option>
+                            <option value="5">其他</option>
+                        </select>
+
+			<span>证件类型 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="CardCode" value="" placeholder=""/>
+			<span>证件号码 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Nation" value="" placeholder=""/>
+			<span>民族 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Political" value="" placeholder=""/>
+			<span>政治面貌 ：</span>
+		</li>
+		<li>
+			<div id="hidDomicile" data-toggle="distpicker"><!-- container -->
+			  <select></select><!-- 省 -->
+			  <select></select><!-- 市 -->
+			  <select></select><!-- 区 -->
+			</div> 
+			<span>户籍所在地 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="HomeAddr" value="" placeholder=""/>
+			<span>通讯地址 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Location" value="" placeholder=""/>
+			<span>工作单位 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="PostTitle" value="" placeholder=""/>
+			<span>职称 ：</span>
+		</li>
+		<li>
+			<select name="HighestEdu" id="HighestEdu">
+                            <option value="0">专科</option>
+                            <option value="1">本科</option>
+                            <option value="2">研究生</option>
+                            <option value="3">其他</option>
+                        </select>
+			<span>最高学历 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="QqNo" value="" placeholder=""/>
+			<span>QQ号码 ：</span>
+		</li>
+		<li>
+			<input type="text"  id="Weibo" value="" placeholder=""/>
+			<span>新浪微博账号 ：</span>
+		</li>
+		<button type="button">保存</button>
+	</ul>
+	
+</div>
+
+
+             <!-- <link rel="import" href="modules/html/person_myworks/person_myworks.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_queinf/person_queinf.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_question/person_question.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_last/person_last.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_cer/person_cer.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_card/person_card.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_course/person_course.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_cloud/person_cloud.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_cardinf/person_cardinf.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_message/person_message.html?__inline"> -->
+             <!-- <link rel="import" href="modules/html/person_messageinf/person_messageinf.html?__inline"> -->
+         	 <!-- <link rel="import" href="modules/html/person_bookinf/person_bookinf.html?__inline"> -->
+         	 <!-- <link rel="import" href="modules/html/person_book/person_book.html?__inline"> -->
+        </section>
+    </article>
+
+      <!--<link rel="stylesheet" href="footer.scss">-->
+<footer class="clear">
+	<div class="footer-outer">
+		<!-- <img src="../../../img/common/footer-bc.png" alt="footer" /> -->
+		<div class="content">
+			<div class="left">
+				<p>
+					Copyright2016. All right reserved edu.mohrss.gov.cn
+				</p>
+				<p style="margin-bottom:30px">
+					主办单位：人力资源和社会保障部人事司、人力资源和社会保障部教育培训中心
+				</p>
+				<p>
+					版权所有：北京中教在线科技有限公司
+				</p>
+		</div>
+		<div class="right">
+			<h3>技术支持</h3>
+			<figure class="clear">
+				<img src="/Src/mohrss/img/common/footer-code.png" />
+				<aside>
+					<p>热线电话：010-60603959</p>
+					<p>传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 真：010-60603959</p>
+					<p>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 址：北京市海淀区学院路甲5号768创意产业园</p>
+				</aside>
+			</figure>
+		</div>
+		</div>
+	</div>
+</footer>
+	
+<script type="text/javascript" charset="utf-8" src="/lib/js/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/js/vue/dist/vue.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/js/distpicker/dist/distpicker.data.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/js/distpicker/dist/distpicker.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/app/mine.js"></script>
+</body>
+</html>

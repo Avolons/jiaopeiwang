@@ -201,8 +201,7 @@ header {
         height: 120px;
         background-repeat: no-repeat;
         >img {
-            // margin-top: 25px;
-            // width: 400px;
+            height: 100%;
             display: block;
             float: left;
         }
@@ -632,7 +631,7 @@ article {
                     border: 1px solid #e4e4e4;
                     float: left;
                     width: 287px;
-                    height: 228px;
+                    height: 230px;
                     margin-left: 18px;
                     margin-bottom: 10px;
                     box-sizing: border-box;
@@ -681,7 +680,7 @@ article {
         // background-image: url("../../img/index/index-newsbc.png");
         background-color: #f6f6f6;
         >.title{
-            height: 100px;
+            height: 85px;
         }
         >.inner {
             width: 1200px;
@@ -789,7 +788,7 @@ article {
     }
     >section {
         >.title {
-            height: 115px;
+            height: 85px;
             width: 1200px;
             margin: 0 auto;
             >a {
@@ -798,7 +797,7 @@ article {
                 text-decoration: none;
             }
             >.one {
-                margin-top: 20px;
+                margin-top: 12px;
                 text-indent: 20px;
                 line-height: 53px;
                 float: left;
@@ -817,7 +816,7 @@ article {
                 }
             }
             >.more {
-                margin-top: 25px;
+                margin-top: 17px;
                 text-indent: 73px;
                 line-height: 42px;
                 float: right;

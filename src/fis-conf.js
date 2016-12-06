@@ -1,7 +1,7 @@
 // 设置项目属性
 fis.set('project.name', 'xiuya');
 fis.set('project.static', '/static');
-fis.set('project.img', '/teams');
+fis.set('project.img', '/Src/mohrss');
 fis.set('project.files', ['*.html', 'map.json', '/test/*','/lib/**/*']);
 
 // 引入模块化开发插件，设置规范为 commonJs 规范。
@@ -30,7 +30,7 @@ fis.match('/lib/**/*', {
 });
 
 fis.match('/img/**/*', {
-    release: '${project.static}/$&'
+    release: '${project.img}/$&'
 });
 
 // ------ 配置components
